@@ -1,0 +1,465 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(249, 238, 238, 0.8);
+    width: 100%;
+    height: 100%;
+}
+
+/* Header and Navigation */
+.my_nav {
+    width: 100%;
+    display: flex;
+    background-color: rgba(249, 238, 238, 0.8);
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my_nav img {
+    padding-left: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+    padding-right: 80px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding-left: 50px;
+    font-weight: bold;
+    transition: color 0.5s ease-in-out;
+}
+
+nav a:hover {
+    color: #f9bad4;
+}
+
+/* First Section */
+.container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#pink_tokyo {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    transition: transform 2s ease-in-out;
+}
+
+.container .welcome {
+    width: 100%;
+    color: #ffcccc;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+    transition: bottom 1s ease-in-out;
+}
+
+.container .sum {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 0 30px 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 250px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.container:hover .sum {
+    opacity: 1;
+}
+
+.container:hover .welcome {
+    bottom: 300px;
+}
+
+.container:hover img {
+    transform: scale(1.2);
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Four Seasons */
+.weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.highlight {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.season {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.season img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.season h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.season p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    opacity: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+    font-size: 0.9em;
+}
+
+.season:hover p {
+    opacity: 1;
+}
+
+.season:hover {
+    transform: scale(1.05);
+}
+
+.season:hover h3 {
+    display: none;
+}
+
+/* Animation */
+.my-ani {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.animation {
+    display: flex;
+    width: 200%;
+    height: 100%;
+    justify-content: space-evenly;
+    animation: slide 20s linear infinite;
+}
+
+.animation img {
+    width: auto;
+    flex-shrink: 0;
+    height: auto;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Map */
+.my-map {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.my-map img {
+    display: block;
+    width: 100%;
+}
+
+.overlay-t {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(249, 238, 238, 0.8), #ffffff);
+}
+
+.overlay-b {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to top, rgba(249, 238, 238, 0.8), #ffffff);
+}
+
+/* Plans */
+.plans {
+    text-align: center;
+    padding: 40px 0;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.overlay-p {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    top: 0px;
+    background: linear-gradient(to bottom, rgba(249, 238, 238, 0.8), rgba(255, 255, 255, 0.8));
+}
+
+.plan a {
+    text-decoration: none;
+}
+
+.plans .my-title-p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-title-p img {
+    width: 300px;
+    padding: 0 60px;
+}
+
+.plans h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.plan {
+    width: 31%;
+    height: 500px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.plan img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.plan h3 {
+    position: absolute;
+    width: 80%;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 20;
+    text-align: center;
+}
+
+.plan p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    opacity: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+    font-size: 15px;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+}
+
+.plan:hover p {
+    opacity: 1;
+}
+
+.plan:hover h3 {
+    display: none;
+}
+
+/* Contact */
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact .socials img {
+    width: 30px;
+    height: 30px;
+}
+
+input {
+    margin: 5px 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: rgb(203, 203, 203);
+    padding: 5px;
+}
+
+.socials a {
+    text-decoration: none;
+}
+
+.socials img {
+    padding:  20px;
+}
+
+.more-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-mail {
+    padding-left: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #f7c4ca;
+    color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.copy {
+    padding: 20px;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 1024px) {
+    .highlight {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .season {
+        width: 100%;
+    }
+
+    .plans {
+        padding: 20px 0;
+    }
+
+    .plan {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .my_nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .my_nav nav {
+        margin-top: 20px;
+        padding-right: 0;
+    }
+
+    .my_nav img {
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .container .sum {
+        height: auto;
+    }
+
+    .container .welcome {
+        bottom: 20px;
+    }
+
+    .container:hover .welcome, .container:hover .sum {
+        bottom: 20px;
+    }
+
+    .highlight {
+        width: 100%;
+    }
+
+    .season {
+        width: 30%;
+    }
+
+    .plan {
+        margin: 10px 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .my-ani {
+        height: 150px;
+    }
+
+    .animation img {
+        width: 60px;
+    }
+
+    .plans .plan {
+        height: auto;
+    }
+
+    .plans .plan img {
+        height: 40%;
+    }
+}
